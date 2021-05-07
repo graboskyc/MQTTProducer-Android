@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MQTTProducer.MainPage">
+
+    <ScrollView>
+        <StackLayout>
+            <Frame BackgroundColor="#116149" Padding="24" CornerRadius="0">
+                <Label Text="MQQT Producer" HorizontalTextAlignment="Center" TextColor="#FAFBFC" FontSize="36"/>
+            </Frame>
+
+            <Label Text="Broker" FontSize="16" TextColor="#116149" x:Name="lbl_broker" />
+            <Entry Placeholder="10.0.0.15" Keyboard="Url" IsSpellCheckEnabled="False" IsTextPredictionEnabled="False" x:Name="txt_broker"></Entry>
+
+            <Label Text="Port" FontSize="16" TextColor="#116149" x:Name="lbl_port"  />
+            <Entry Text="1883" Keyboard="Numeric" IsSpellCheckEnabled="False" IsTextPredictionEnabled="False" x:Name="txt_port"></Entry>
+
+            <Label Text="Client ID" FontSize="16" TextColor="#116149" x:Name="lbl_clientid"  />
+            <Entry Placeholder="xamarin" Keyboard="Default" IsSpellCheckEnabled="False" IsTextPredictionEnabled="False" x:Name="txt_clientid"></Entry>
+
+            <Label Text="Topic" FontSize="16" TextColor="#116149" x:Name="lbl_topic"  />
+            <Entry Placeholder="xamarin" Keyboard="Default" IsSpellCheckEnabled="False" IsTextPredictionEnabled="False" x:Name="txt_topic"></Entry>
+
+            <Button Pressed="btn_runClicked" Text="Run It" BackgroundColor="#01D05B" TextColor="#21313C" x:Name="btn_run"></Button>
+            <Button Pressed="btn_stopClicked" Text="Stop It" BackgroundColor="#ED5D75" TextColor="#21313C" x:Name="btn_stop1"></Button>
+
+            <Label x:Name="output" ></Label>
+
+            <Button Pressed="btn_stopClicked" Text="Stop It" BackgroundColor="#ED5D75" TextColor="#21313C" x:Name="btn_stop2"></Button>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
