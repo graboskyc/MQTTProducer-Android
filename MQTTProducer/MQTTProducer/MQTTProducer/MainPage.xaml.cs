@@ -80,7 +80,7 @@ namespace MQTTProducer
             int reading = rnd.Next(1000);
 
             string timestamp = DateTime.UtcNow.ToString("yyyy-MM-dd HH:mm:ss.fff",  CultureInfo.InvariantCulture);
-            string payload = "{\"reading\":" + reading.ToString() + ", \"when\":\""+ timestamp + "\"}";
+            string payload = reading;
 
             output.Text = output.Text + "\n\n" + payload;
 
